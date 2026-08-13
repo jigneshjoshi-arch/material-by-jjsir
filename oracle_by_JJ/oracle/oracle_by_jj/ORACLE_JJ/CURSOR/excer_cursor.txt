@@ -1,5 +1,0 @@
-1 create plsql blcok to display job wise maxsal from emp table
-2 create plsql block which count number of employee from each deptno
-3 . Display Unique Job Titles:
-4 count experiance for each employee
-5. display employee according their location entered by user

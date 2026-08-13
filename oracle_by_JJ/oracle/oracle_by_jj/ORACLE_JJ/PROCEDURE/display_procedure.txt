@@ -1,3 +1,0 @@
-select text from user_source where name='FINDEMP'
-and type='PROCEDURE'
-order by line;

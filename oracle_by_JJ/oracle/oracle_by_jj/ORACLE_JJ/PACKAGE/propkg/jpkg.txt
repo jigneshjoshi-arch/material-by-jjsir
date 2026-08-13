@@ -1,3 +1,0 @@
- create or replace package jpack as
-	procedure jemp(jempno in emp.deptno%type);
- end jpack;
