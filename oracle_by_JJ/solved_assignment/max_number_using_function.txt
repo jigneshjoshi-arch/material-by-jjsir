@@ -1,0 +1,19 @@
+declare
+x number(20);
+y number(20);
+z number(20);
+fun_call number(20);
+function jmax(a number,b number,c number) return number is
+j number(20);
+begin
+	j:=greatest(a,b,c);
+	return j; 
+end ;
+begin
+	x:=&x;
+	y:=&y;
+	z:=&z;
+	fun_call := jmax(x,y,z);
+	dbms_output.put_line('max is '||fun_call);
+end ;
+/

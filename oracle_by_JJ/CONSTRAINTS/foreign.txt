@@ -1,0 +1,14 @@
+ create table school
+ (rno number(3),
+ sname varchar(3),
+ corseno number(3),
+ addr varchar2(20),
+j_fkey foreign key(corseno) references uni(ccode)
+ on delete cascade)
+
+-----INSERT INTO SCHOOL----
+
+insert into school
+ values('&rno','&sname','&corseno','&addr')
+
+

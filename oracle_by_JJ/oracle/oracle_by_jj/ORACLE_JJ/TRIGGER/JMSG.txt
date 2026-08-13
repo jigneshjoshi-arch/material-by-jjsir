@@ -1,0 +1,57 @@
+create table jstud
+(sname char(20))
+/
+insert into jstud
+values
+('&sname');
+
+CREATE OR REPLACE TRIGGER JMSG
+
+	BEFORE INSERT OR DELETE OR UPDATE
+
+	ON jstud
+	
+	FOR EACH ROW
+BEGIN
+	IF INSERTING THEN
+
+	DBMS_OUTPUT.PUT_LINE(chr(13));
+
+	DBMS_OUTPUT.PUT_LINE( '1 RECORD INSERTED' );
+		
+
+	ELSIF DELETING THEN
+
+	DBMS_OUTPUT.PUT_LINE( 'RECORD DELETED');
+
+	ELSIF UPDATING THEN
+
+	DBMS_OUTPUT.PUT_LINE( 'RECORD UPDATED');
+
+	END IF;
+END;
+
+
+
+
+
+-------------------------------------------------------------------------------------
+
+CREATE [OR REPLACE] TRIGGER <name>
+
+[BEFORE / AFTER / INSTEAD OF]
+
+[DELETE / INSERT / UPDATE [OF <col1>,<col2>..]]
+
+ON <table / view name>
+
+[FOR EACH ROW [WHEN <condition>]]
+
+DECLARE
+	<VAR>
+BEGIN
+	PL/SQL STATEMENT
+EXCEPTION
+
+	EXCEPTION 
+END;

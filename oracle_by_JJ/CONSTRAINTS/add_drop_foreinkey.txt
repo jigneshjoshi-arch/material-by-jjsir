@@ -1,0 +1,27 @@
+adding foreign key after table creation
+
+alter table college
+add constraint fk_cno
+foreign key(cno)
+references uni(ccode)
+-----------------------------------------
+
+1. Identify the Foreign Key Constraint
+SELECT constraint_name
+FROM all_constraints
+WHERE table_name = 'YOUR_TABLE_NAME'
+  AND constraint_type = 'R'; -- 'R' stands for Referential (Foreign Key)
+-------------------------------------------------------------------------------------------------------
+SELECT constraint_name
+FROM all_constraints
+WHERE table_name = 'CLG'
+  AND constraint_type = 'R';
+----------------------------------------------------------------------------
+2. Drop the Foreign Key Constraint
+
+ALTER TABLE students
+DROP CONSTRAINT constraint_name;
+
+ALTER TABLE students
+DROP CONSTRAINT FK_CNO(which finds in select query);
+

@@ -1,0 +1,6 @@
+Departments with more than 3 employees
+
+SELECT DEPTNO, COUNT(*) AS EMP_COUNT
+FROM EMP
+GROUP BY DEPTNO
+HAVING COUNT(*) > 3;

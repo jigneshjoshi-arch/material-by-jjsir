@@ -1,0 +1,16 @@
+ declare
+
+   jname emp.ename%type;
+
+   jsal emp.sal%type;
+
+  begin
+	jname := '&jname';
+	
+   select ename,sal into jname,jsal from emp
+   where ename = jname;
+
+   dbms_output.put_line(jname||'-'||jsal);
+   
+  end;
+/

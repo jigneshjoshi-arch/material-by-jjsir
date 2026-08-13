@@ -1,0 +1,11 @@
+declare
+	j number(10);
+begin
+	j:=&j;
+	if mod(j,4)=0 then
+		dbms_output.put_line('it is leap year');
+	else
+		dbms_output.put_line('it is not leap year');
+	end if;
+end; 
+/

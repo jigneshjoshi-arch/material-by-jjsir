@@ -1,0 +1,10 @@
+create table bank
+(eno number(3) unique,
+name varchar2(14),
+acct_number number(15) unique);
+
+----insert in table-----
+
+insert into bank
+values
+('&eno','&ename','&acct_number');

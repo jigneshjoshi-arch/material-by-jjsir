@@ -1,0 +1,15 @@
+declare
+	a number(3);
+	b number(3);
+	j number(3);
+begin
+	a := &a;
+	b := &b;
+		
+	j := jpack.add(a,b);
+	dbms_output.put_line('addition ' || j);
+
+	j := jpack.nmax(a,b);
+	dbms_output.put_line('max value' || j);
+
+end;

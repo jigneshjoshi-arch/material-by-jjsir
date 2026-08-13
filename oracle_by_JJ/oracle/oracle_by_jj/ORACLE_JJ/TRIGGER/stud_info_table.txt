@@ -1,0 +1,38 @@
+create table stud_info
+(sno number(3),
+sname char(20),
+stream varchar2(5),
+doj date,
+stream_year number(3))
+/
+
+insert into stud_info
+values
+(&sno,'&sname','&stream','&doj','&stream_year')
+/
+
+
+create table backup_stud
+(sno number(3),
+sname char(20),
+stream char(10),
+doj date)
+/
+
+create or replace trigger jbackup
+before delete
+on stud_info
+for each row
+begin
+   if deleting then
+           insert into backup_stud
+           values
+           (:old.sno,:old.sname,:old.stream,:old.doj);
+   end if;
+end;
+
+
+
+
+
+

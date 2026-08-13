@@ -1,0 +1,11 @@
+
+ create table jj
+ (jname varchar2(20) check(jname = upper(jname)),
+ jid varchar2(8) check(jid like 'J%'));
+
+
+-----insert into jj--------
+
+ insert into jj
+ values
+ ('&jname','&jid');

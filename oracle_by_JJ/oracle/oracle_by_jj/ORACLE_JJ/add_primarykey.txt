@@ -1,0 +1,12 @@
+declare
+    tname varchar2(30);
+    fname varchar2(30);
+    vsql varchar2(200);
+begin
+    tname := '&tname';
+    fname := '&fname';
+    vsql := 'alter table ' || tname || ' add constraint pk_' || tname || ' primary key (' || fname || ')';
+    execute immediate vsql;
+    dbms_output.put_line('Primary key added');
+end;
+/

@@ -1,0 +1,11 @@
+ declare
+	j emp%rowtype;
+  begin
+	j.ename := '&j';
+
+   select ename,sal into j.ename,j.sal from emp
+   where ename = j.ename;
+
+   dbms_output.put_line(j.ename||'-'||j.sal);
+  end;
+/

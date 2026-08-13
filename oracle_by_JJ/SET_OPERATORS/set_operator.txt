@@ -1,0 +1,24 @@
+
+select *from emp where deptno = 10
+union
+select *from emp where deptno in (10,20);
+
+------------------------------------------------
+
+select *from emp where deptno = 10
+union all
+select *from emp where deptno in (10,20);
+
+------------------------------------------------
+
+select *from emp where deptno in (10,20)
+intersect
+select *from emp where deptno in (20,30);
+
+----------------------------------------------------
+
+select *from emp where deptno in (10,20)
+minus
+select *from emp where deptno = 20;
+
+----------------END----------------------------

@@ -1,0 +1,35 @@
+declare
+	tot number(10);
+	j number(10);
+	n number(20);
+	javg number(20);
+	k number(20);
+begin
+	n := &n;
+	tot:=0;
+	k:=0;
+	j:=1;
+
+	while j<=n
+	loop
+
+		if mod(j,2)=0 then
+
+			dbms_output.put_line(j);
+
+			tot := tot+j;
+			k:=k+1;
+
+		end if;
+
+	j:=j+1;
+
+	end loop;
+
+	javg := tot/K;
+
+	dbms_output.put_line('total even number is  '||k);
+	dbms_output.put_line('sum of even number is '||tot);
+	dbms_output.put_line('avarage of even number is '||javg);
+end;
+/
