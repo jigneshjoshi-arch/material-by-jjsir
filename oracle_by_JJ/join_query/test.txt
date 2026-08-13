@@ -1,8 +1,0 @@
-﻿1) Employees working in ‘SALES’
-2) Show employee with department location as 'DALLAS'
-3) Employees whose manager is 'KING'(self join)
-4) Join EMP and DEPT and filter employees whose job is not 'CLERK' and deptno ≠ 10.
-5) Join EMP and DEPT and display only those employees whose names contain letter 'A' and LOC = 'DALLAS'.
-6) List each department and a flag if it has any 'MANAGER' job title in EMP.
-7) Join EMP and DEPT, and flag employees earning more than 3000 and working in 'CHICAGO'.
-8) Join EMP and DEPT and display only those employees whose department name ends with 'G'.

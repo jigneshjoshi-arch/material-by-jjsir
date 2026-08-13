@@ -1,5 +1,0 @@
-create or replace package jpack as
-	function add(n1 number, n2 number) return number;
-	function nmax(n1 number, n2 number) return number;
-end jpack;
-

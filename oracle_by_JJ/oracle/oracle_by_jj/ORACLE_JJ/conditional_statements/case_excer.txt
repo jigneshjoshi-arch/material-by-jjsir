@@ -1,8 +1,0 @@
-1 discount calculation of customer if customer is regular(R) than give them discount to 5% if prime(P) member than discount to 10%
-2 Assign Grade Based on Marks:
-	marks>=90   A+
-		80 A
-		70 B
-		60 C
-		50 D
- 
