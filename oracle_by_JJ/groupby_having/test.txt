@@ -1,0 +1,10 @@
+1. Count of employees in each department
+2. Average salary per manager
+3. Minimum and maximum salary by department
+4. Departments with more than 3 employees
+5. Jobs with total salary over 1000
+6. Departments with average salary less than 2000
+7. Managers managing more than 1 employee
+8. Jobs where maximum salary is greater than 1000
+9. Departments with at least one employee earning more than 4000
+10. Department and job with minimum salary less than 2000

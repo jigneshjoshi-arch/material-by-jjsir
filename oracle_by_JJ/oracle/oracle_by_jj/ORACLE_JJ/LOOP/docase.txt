@@ -1,0 +1,23 @@
+declare
+	 j varchar(3);
+begin
+	 j := '&j';
+case j
+ 	when 1 then
+		 dbms_output.put_line('	today is sunday');
+ 	when 2 then
+		 dbms_output.put_line('	today is monday');
+	 when 3 then
+		 dbms_output.put_line('	today is tuesday');
+	 when 4 then
+		 dbms_output.put_line('	today is wednesday');
+	 when 5 then
+		 dbms_output.put_line('	today is thursday');
+	 when 6 then
+		 dbms_output.put_line('	today is friday');
+	 when 7 then
+		 dbms_output.put_line('	today is saturday');
+else
+	 dbms_output.put_line('	today is not a day');
+end case;
+end;

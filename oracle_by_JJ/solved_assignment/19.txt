@@ -1,0 +1,26 @@
+-------------create object---------
+
+create type stdmrk as object
+(m1 number(3), m2 number(3), m3 number(3), m4 number(3));
+/
+
+------------create type----------
+
+create type jjnest as table of stdmrk;
+
+-----------create nested table-----------
+
+create table stdmark
+(sno number(10),
+sname char(20),
+smark jjnest)
+nested table smark store as jjnest_tab
+
+--------------insert record----------
+
+insert into stdmark
+values
+(&sno,'&sname',
+jjnest(stdmrk(&m1,&m2,&m3,&m4)));
+
+

@@ -1,0 +1,33 @@
+ select job,max(sal) from emp
+ group by job;
+
+ select job,avg(sal) from emp
+ group by job
+
+ select deptno,count(job) from emp
+ group by deptno
+
+By default, GROUP BY sorts the rows in ascending order based on the values in the group column.
+
+-------------------------------------------------------------------------------------------
+			HAVING CLAUSE
+
+You use the HAVING clause to filter groups of rows
+
+GROUP BY can be used without HAVING.
+
+But HAVING must be used in  with GROUP BY.
+
+You place the HAVING clause after your GROUP BY clause:
+
+Having clause special use for give condition to group by like WHERE.
+
+
+ select job,avg(sal) from emp
+ group by job
+ having avg(sal) between 2000 and 3000
+
+
+
+
+

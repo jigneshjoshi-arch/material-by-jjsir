@@ -1,0 +1,47 @@
+
+
+inner join
+
+select e.ename,d.dname from emp e,dept d
+where e.deptno=d.deptno;
+
+------------------------------------------------------------------------------
+
+outer join
+
+left outer join
+
+select e.ename,e.deptno,d.dname,d.deptno from emp e,dept d
+where e.deptno=d.deptno(+)
+
+right outer join
+
+select e.ename,e.deptno,d.dname,d.deptno from emp e,dept d
+where e.deptno(+)=d.deptno
+
+full outer join
+
+select e.ename,e.deptno,d.dname,d.deptno from emp e,dept d
+where e.deptno=d.deptno(+)
+union
+select e.ename,e.deptno,d.dname,d.deptno from emp e,dept d
+where e.deptno(+)=d.deptno
+
+
+-----------------------------------------------------------------------------
+
+self join
+
+select e.empno,d.mgr,e.ename,d.job from emp e, emp d
+where e.empno=d.mgr
+
+-------------------------------------------------------------------------------
+
+cross join
+
+select e.ename,d.dname from emp e,dept d;
+
+
+----------------------------------THE END----------------------------------
+
+

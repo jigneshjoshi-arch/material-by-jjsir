@@ -1,0 +1,14 @@
+declare
+	a number(10);
+begin
+	a := &a;
+case a
+	when 1 then
+	dbms_output.put_line('sunday');
+	when 2 then 
+	dbms_output.put_line('monday');
+else
+	dbms_output.put_line('holiday');
+end case;
+end;	
+/

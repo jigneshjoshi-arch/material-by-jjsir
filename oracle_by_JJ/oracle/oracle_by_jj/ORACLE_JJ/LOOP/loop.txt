@@ -1,0 +1,25 @@
+SYNTAX
+
+	LOOP
+		<STATEMENT>
+
+		[EXIT WHEN (CONDITION)];
+	END LOOP  
+
+
+
+
+
+EXAMPLE
+
+DECLARE
+      j  NUMBER(3);
+    BEGIN
+      j := 1;
+      LOOP
+        DBMS_OUTPUT.PUT_LINE(j);
+        j := j + 1;
+	exit when j>10;
+      END LOOP;
+ END;
+/

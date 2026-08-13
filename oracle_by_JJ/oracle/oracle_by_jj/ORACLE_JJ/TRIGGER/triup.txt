@@ -1,0 +1,40 @@
+CREATE OR REPLACE TRIGGER jinfo
+
+      BEFORE INSERT OR UPDATE ON j1
+
+      FOR EACH ROW
+
+BEGIN
+         --Force all employee names to uppercase.
+
+    :NEW.jnam := UPPER(:NEW.jnam);
+
+END;
+
+
+
+
+
+
+
+
+
+
+
+CREATE OR REPLACE TRIGGER jinfo
+   BEFORE INSERT OR UPDATE ON j1
+   FOR EACH ROW
+   
+ BEGIN
+         
+    IF INSERTING and :NEW.jnam = UPPER(:NEW.jnam) THEN
+	
+	    :NEW.jnam :=LOWER(:NEW.jnam);
+		
+ELSIF INSERTING AND :NEW.JNAM = LOWER(:NEW.JNAM) THEN
+	
+		:NEW.JNAM := UPPER(:NEW.JNAM);
+		
+    END IF;
+ END;
+/

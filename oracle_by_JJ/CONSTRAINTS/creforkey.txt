@@ -1,0 +1,8 @@
+create table clg
+(rno number(3),
+snam char(20),
+cno number(3) references uni(ccode));
+
+insert into clg
+values
+(&rno,'&snam',&cno);

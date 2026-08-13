@@ -1,0 +1,49 @@
+declare
+	act passbook%rowtype;
+	p char(4);
+	c number(10);
+	d number(10);
+begin
+	act.act_number := &act;
+	select act_number into act.act_number from passbook
+	where act_number=act.act_number;
+
+	dbms_output.put_line('user exist');
+
+	p := '&p';
+
+	case p
+		when 'c' then
+
+		c := &c;
+			update passbook
+			set balance=balance+c
+			where act_number=act.act_number;
+
+			update passbook
+			set credit=c
+			where act_number=act.act_number;
+			dbms_output.put_line('credited in your account');
+
+		when 'd' then
+
+		d := &d;
+			update passbook
+			set balance=balance-d
+			where act_number=act.act_number;
+
+			update passbook
+			set debit=d
+			where act_number=act.act_number;
+
+			dbms_output.put_line('debited from your account');
+		else
+			dbms_output.put_line('enter valid choice');
+	end case;
+exception
+
+	when no_data_found then
+
+	dbms_output.put_line('no user found');
+end;
+/

@@ -1,0 +1,12 @@
+create or replace procedure msg
+    as
+       v_string varchar2(20);
+
+    begin
+
+	v_string := '&v_string';
+
+       dbms_output.put_line('	string value is '||v_string);
+
+end;
+ 

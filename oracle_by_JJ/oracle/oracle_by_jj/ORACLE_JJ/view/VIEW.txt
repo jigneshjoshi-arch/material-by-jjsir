@@ -1,0 +1,54 @@
+create table hjd
+(ename char(10),sal number(10),city varchar2(10));
+
+insert into hjd values('abc',23000,'jamnagar');
+insert into hjd values('def',10000,'rajkot');
+insert into hjd values('ghi',16000,'baroda');
+insert into hjd values('kml',15000,'surat');
+
+select *From hjd;
+
+
+------------------UPDATEABLE VIEW----------------------------
+
+
+CREATE OR REPLACE VIEW VEMP AS 
+SELECT ENAME,sal FROM HJD
+WHERE SAL>15000;
+
+INSERT INTO VEMP VALUES('xyz',2100);
+
+------------------VIEW WITH READ ONLY--------------------
+
+CREATE OR REPLACE VIEW VEMP AS 
+SELECT ENAME,SAL FROM hjd
+WHERE SAL>15000
+WITH READ ONLY;
+
+INSERT INTO VEMP VALUES('xyz',5000);
+
+---------VIEW WITH CHECK OPTION-------------------------
+
+CREATE OR REPLACE VIEW VEMP AS 
+SELECT ENAME,SAL FROM HJD
+WHERE SAL > 15000
+WITH CHECK OPTION;
+
+INSERT INTO VEMP VALUES('xyz',1500);
+
+----------------FORCE VIEW------------------------------
+
+CREATE FORCE VIEW JFRIEND
+AS SELECT FNAME,MOB FROM FRIEND;
+
+
+CREATE TABLE FRIEND (
+    FNAME VARCHAR2(50),
+    MOB   VARCHAR2(15)
+);
+
+INSERT INTO FRIEND (FNAME, MOB) VALUES ('Alice', '9876543210');
+INSERT INTO FRIEND (FNAME, MOB) VALUES ('Bob', '9123456789');
+INSERT INTO FRIEND (FNAME, MOB) VALUES ('Charlie', '9988776655');
+INSERT INTO FRIEND (FNAME, MOB) VALUES ('Diana', '9001122334');
+INSERT INTO FRIEND (FNAME, MOB) VALUES ('Eve', '9011223344');
