@@ -1,0 +1,7 @@
+CREATE SEQUENCE jseq;
+
+
+SELECT jseq.nextval FROM DUAL;
+
+ALTER SEQUENCE jseq
+    INCREMENT BY 2;

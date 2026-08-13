@@ -1,0 +1,8 @@
+using %type or %rowtype as datatype
+
+1 Program to Calculate the Average Salary
+2 Program to Update Employee Salary
+3 Program to Delete an Employee if found
+4 Add primary key on field given table
+5 calculate bonus for employee, where sal>2000 than 10% else
+  bonus 5% of sal

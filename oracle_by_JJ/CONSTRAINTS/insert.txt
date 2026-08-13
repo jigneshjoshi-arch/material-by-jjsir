@@ -1,0 +1,7 @@
+insert into uni
+values('&ccode','&corsename','&duration')
+/
+
+ALTER TABLE SCHOOL
+ADD CONSTRAINT F_CNO FOREIGN KEY(CORSENO)
+REFERENCES UNI(CCODE)

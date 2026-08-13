@@ -1,0 +1,11 @@
+create table uni
+(ccode number(3)primary key,
+cname varchar2(15),
+duration number(1));
+
+INSERT INTO uni (ccode, cname, duration) VALUES (101, 'BCA', 3);
+INSERT INTO uni (ccode, cname, duration) VALUES (102, 'MCA', 2);
+INSERT INTO uni (ccode, cname, duration) VALUES (103, 'BBA', 3);
+INSERT INTO uni (ccode, cname, duration) VALUES (104, 'MBA', 2);
+INSERT INTO uni (ccode, cname, duration) VALUES (105, 'PGDCA', 1);
+

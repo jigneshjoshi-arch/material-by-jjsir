@@ -1,0 +1,13 @@
+Create sequence <name>
+
+	[Start with <no>
+
+	Increment by <no>
+
+	Minvalue <no> / Nominvalue
+
+	Maxvalue <no> / Nomaxvalue
+
+	Cycle / Nocycle
+
+	Cache / Nocache]

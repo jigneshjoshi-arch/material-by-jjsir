@@ -1,0 +1,19 @@
+1)List the employee details whose salary is greater  than the lowest salary of an     employee belonging to deptno 20
+
+2)List the details of the employee earning more than the highest paid manager
+
+3)List the highest salary paid for each job
+
+4)Arrange the emp table by descending  empno
+
+5)List the employee if and only if employee belong to department no 10
+
+6)List the names and commissions of all employee whose salary greater than 1000
+
+7)Find all employee whose name starts with “s” and the fourth character is “t”
+
+8)Find highest paid employee in each department 
+
+9)Create sequence which start with 10 , increment by 3 ,minvalue 5, maxvalue   30,cycle and cache and put sequence in student table on seqno field (student   table (sno,sname,seqno,scity)
+
+10)Create read only view whose salary is greater than 1000 

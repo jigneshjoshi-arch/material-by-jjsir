@@ -1,0 +1,7 @@
+﻿Get employees who earn more than the salary of ‘SMITH’.
+List employees whose salary equals that of employee number 7788.
+Show employees whose department number is same as that of ‘KING’.
+Display employees whose salary is equal to the salaries in department 30.
+Employees whose salary is higher than the maximum salary in department 10
+Find employees whose job is one of the jobs held in department 20.
+Get employees who joined after at least one person from department 30.

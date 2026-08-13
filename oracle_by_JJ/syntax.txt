@@ -1,0 +1,32 @@
+table
+create table tname
+(fname datatype(size),...);
+
+insert
+insert into tname
+values
+('&fname',....);
+
+
+select
+display all records
+select * from tname;
+
+display particular fields
+select fname1,fname2,..from tname
+
+display particular records
+select *from tname
+where fname='value'; 
+
+
+delete
+delete tname; all records
+
+delete particular records
+delete tname 
+where fname='value'; 
+
+update tname
+set fname='newvalue'
+where fname='oldvalue';

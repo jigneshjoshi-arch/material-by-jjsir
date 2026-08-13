@@ -1,0 +1,19 @@
+create or replace procedure jpass(s1 in number,s2 in number, s3 in number, s4 in number) is
+begin
+	if(s1>=40 and s2>=40 and s3>=40 and s4>=40) then
+	
+		dbms_output.put_line(chr(10));
+		dbms_output.put_line('you are pass in all subject');
+		
+	elsif(s1<40 and s2<40 and s3<40 and s4<40)then
+		
+		dbms_output.put_line(chr(10));
+		dbms_output.put_line('you are fail ');
+		
+	else
+	
+		dbms_output.put_line(chr(10));
+		dbms_output.put_line('you have ATKT');
+		
+	end if;
+end;

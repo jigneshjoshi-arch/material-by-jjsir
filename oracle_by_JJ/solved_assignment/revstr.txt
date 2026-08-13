@@ -1,0 +1,22 @@
+declare
+	str string(20);
+	len number(10);
+	str1 string(20);
+
+begin
+	str := '&str';
+	len := length(str);
+
+	--dbms_output.put_line(chr(10));	
+	--dbms_output.put_line(len);
+
+	for i in reverse 1..len
+	loop
+		str1 := str1||substr(str,i,1);
+	end loop;
+
+	dbms_output.put_line(chr(10));	
+	dbms_output.put_line(str1);
+
+end;
+/

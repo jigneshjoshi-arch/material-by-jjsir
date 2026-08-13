@@ -1,0 +1,13 @@
+CREATE SEQUENCE JSEQ
+    START WITH 5 
+	INCREMENT BY 5
+    MINVALUE 1 
+	MAXVALUE 20
+    CYCLE 
+	CACHE 2;
+
+SELECT JSEQ.nextval FROM dual;
+
+
+drop sequence JSEQ
+

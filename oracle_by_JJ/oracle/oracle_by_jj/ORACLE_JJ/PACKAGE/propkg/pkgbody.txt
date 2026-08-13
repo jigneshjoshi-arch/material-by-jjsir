@@ -1,0 +1,19 @@
+create or replace package body jpack as
+
+procedure jemp(jempno in emp.deptno%type) is
+
+	jnam emp.ename%type;
+	jsal emp.sal%type;
+ begin
+
+	select ename,sal into jnam,jsal from emp
+        where empno = jempno;
+
+	    dbms_output.put_line(jnam ||' '|| 'exist');
+
+exception
+  	   when no_data_found then
+	   dbms_output.put_line('no employee there');
+end jemp;
+
+ end jpack;

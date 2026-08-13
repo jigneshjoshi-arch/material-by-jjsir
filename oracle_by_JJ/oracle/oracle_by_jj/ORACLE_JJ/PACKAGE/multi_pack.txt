@@ -1,0 +1,4 @@
+create or replace package jpack is
+	procedure edept(jdept emp.deptno%type,a number,b number,c number);
+end jpack;
+/

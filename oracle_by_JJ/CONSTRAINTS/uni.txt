@@ -1,0 +1,57 @@
+---primary key at column level----
+
+create table uni
+(ccode number(3)primary key,
+cname varchar2(15),
+duration number(1));
+
+INSERT INTO uni (ccode, cname, duration) VALUES (101, 'BCA', 3);
+INSERT INTO uni (ccode, cname, duration) VALUES (102, 'MCA', 2);
+INSERT INTO uni (ccode, cname, duration) VALUES (103, 'BBA', 3);
+INSERT INTO uni (ccode, cname, duration) VALUES (104, 'MBA', 2);
+INSERT INTO uni (ccode, cname, duration) VALUES (105, 'PGDCA', 1);
+
+
+---primary key at table level---
+
+create table uni
+(ccode number(3),
+cname varchar2(15),
+duration number(1),
+primary key(ccode,cname));
+
+----insert into uni----
+
+insert into uni
+values('&ccode','&cname','&duration');
+
+
+----foreign key table----
+
+create table clg
+(rno number(3),
+snam char(20),
+cno number(3) references uni(ccode)
+on delete cascade);
+
+on delete cascade);
+
+on delete set null);
+
+INSERT INTO clg (rno, snam, cno)
+VALUES (1, 'John Doe', 101);
+
+INSERT INTO clg (rno, snam, cno)
+VALUES (2, 'Jane Smith', 102);
+
+INSERT INTO clg (rno, snam, cno)
+VALUES (3, 'Alice Johnson', 103);
+
+insert into clg
+values
+(&rno,'&snam',&cno);
+
+
+
+
+

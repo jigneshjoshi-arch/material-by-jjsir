@@ -1,0 +1,36 @@
+ create table hjd
+ (sno number(10),
+ sname char(10),
+ gender char(10),
+ stream char(10));
+
+
+------------pl/sql block for insert record in all table------------------
+
+ declare
+    sno number(10);
+    sname char(10);
+    gender char(10);
+    stream char(10);
+ begin
+
+    sno := &sno;
+    sname := '&sname';
+    gender := '&gender';
+    stream := '&stream';
+
+    insert into hjd
+    values
+    (sno,sname,gender,stream);
+
+    if gender = 'boy' then
+
+            insert into boy
+            values
+            (sno,sname,gender,stream);
+    else
+            insert into girl
+            values
+            (sno,sname,gender,stream);
+    end if;
+end;

@@ -1,0 +1,17 @@
+ DECLARE
+      ename_c CHAR(12);
+      ename_v CHAR(15);
+    BEGIN
+      --Assign the same value to each string.
+      ename_c := 'jignes';
+      ename_v := 'jignesh';
+  
+      --Test the strings for equality.
+
+    IF ename_c = ename_v THEN
+	DBMS_OUTPUT.PUT_LINE('The names are the same');
+     ELSE
+	DBMS_OUTPUT.PUT_LINE('The names are NOT the same');
+   END IF;
+ END;
+/

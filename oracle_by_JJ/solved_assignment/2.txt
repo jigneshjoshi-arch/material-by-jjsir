@@ -1,0 +1,15 @@
+declare
+	tot number(10);
+	j number(10);
+begin
+	tot:=0;
+	j:=1;
+	while j<=200
+	loop
+		dbms_output.put_line(j);
+	tot:=tot+j;
+	j:=j+2;
+	end loop;
+	dbms_output.put_line('sum of odd number is '||tot);
+end; 
+/
